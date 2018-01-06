@@ -1,0 +1,60 @@
+MAQUINA ENIGMA V3.2 (SCROLL DOWN TO ENGLISH VERSION)
+
+Esta version incluye hasta 4 rotores y dos reflectores B y C.
+
+La particularidad de esta version es su interfaz, los colores estan a proposito elegidos
+para recordar a los tipicos usados por los nazis.
+
+USO:
+
+1.- Genera los libros de claves, puedes elegir entre 4 combinaciones de entre 3 y 4 
+rotores con el reflector B o C.
+2.- Inicia el proceso de cifrado, elige una opcion (previamente debes haber creado 
+su libro de claves), elige un dia entre el 1 y el 31 inclusive.
+3.- Aparecera una ventana de configuracion, esta sera la configuracion que tendra la
+maquina para cifrar tus mensajes.
+4.- Escribe en minusculas tu mensaje, no separes por espacios ya que el programa no
+los reconocera, se separan en grupos de 4 letras como semejanza a la verdadera maquina
+Enigma.
+
+NOTA: Si quieres descifrar el mensaje, selecciona la misma configuracion con la que lo
+cifraste y escribe el contenido del mensaje cifrado que se encuentra en el fichero
+MensajeCifrado.txt de esta misma carpeta que se genera durante el proceso de cifrado.
+
+
+NOTA: Para usarlo con mas gente es importante que tengan la misma version del programa
+con la que el mensaje ha sido cifrado, tambien deberas pasarles el archivo binario
+correspondiente al libro de claves que has utilizado y decirles que configuracion y dia
+utilizaste.
+
+----------------------------------------------------------------------------------------
+This version includes 4 rotors and 2 reflectors: B and C.
+
+The main issue of this version is it's interface, colors are intentionally chosen to
+remind the Nazi's ones.
+
+USE:
+
+1.- Generate the key book, you can choose among 4 combinations: 3 or 4 rotors and
+one reflector B or C.
+2.- Initiate the encryption process, choose an option (you have to create the key book
+first), and choose a day of the month between 1 and 31 included.
+3.- Then, a configuration screen should appear, this configuration shall be the one with 
+which your Enigma Machine ciphers your messages.
+4.- Write lowercase messages, do not use whitespaces since the Enigma Machine won't 
+recognize them, it will split up your messages in groups of 4 letters to emulate the
+actual Enigma Machine.
+
+NOTE: If you want to decipher a message, choose the same configuration you used to cipher
+it and write the content of the encrypted message inside the MensajeCifrado.txt file inside
+this same folder. This file is generated during the encryption process.
+
+NOTE: To use it with more people is rather important they use the same version which the
+message was cyphered, also you should pass them the appropriate .bin file of the key book
+you used and tell them which configuration and day you chose.
+
+----------------------------------------------------------------------------------------
+
+
+I'm working on a multilingual version, soon will be released, thanks a lot to take your
+time to choose my program and happy ciphering.
