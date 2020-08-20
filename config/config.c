@@ -26,19 +26,19 @@ void leeConfig (struct sConfig * pConfig) {
             strcpy(nombreArchivo, "./BASEDATOS/libro_M4_C.bin");
     }
 
-    // if(pConfig->numRotores==3 && pConfig->modeloETW=='B')
-    //     strcpy(nombreArchivo, "./BASEDATOS/libro_M3_B.bin");
+    /* if(pConfig->numRotores==3 && pConfig->modeloETW=='B')
+         strcpy(nombreArchivo, "./BASEDATOS/libro_M3_B.bin");
 
-    // if(pConfig->numRotores==3 && pConfig->modeloETW=='C')
-    //     strcpy(nombreArchivo, "./BASEDATOS/libro_M3_C.bin");
+     if(pConfig->numRotores==3 && pConfig->modeloETW=='C')
+         strcpy(nombreArchivo, "./BASEDATOS/libro_M3_C.bin");
     
-    // if(pConfig->numRotores==4 && pConfig->modeloETW=='B')
-    //     strcpy(nombreArchivo, "./BASEDATOS/libro_M4_B.bin");
+     if(pConfig->numRotores==4 && pConfig->modeloETW=='B')
+         strcpy(nombreArchivo, "./BASEDATOS/libro_M4_B.bin");
 
-    // if(pConfig->numRotores==4 && pConfig->modeloETW=='C')
-    //     strcpy(nombreArchivo, "./BASEDATOS/libro_M4_C.bin");
+     if(pConfig->numRotores==4 && pConfig->modeloETW=='C')
+         strcpy(nombreArchivo, "./BASEDATOS/libro_M4_C.bin");*/
 
-    /**ABRE EL FICHERO BINARIO Y AVISA SI HAY ALGUN PROBLEMA*/
+    /*ABRE EL FICHERO BINARIO Y AVISA SI HAY ALGUN PROBLEMA*/
     pCfg=fopen(nombreArchivo, "rb");
     if(pCfg == NULL) {
         setlocale(LC_CTYPE, "Spanish");
@@ -77,9 +77,9 @@ void leeConfig (struct sConfig * pConfig) {
         inicCifrado();
     }
 
-    /**COLOCO EL INDICADOR DE POSICION AL PRINCIPIO DE LA ESTRUCTURA QUE QUIERO LEER*/
+    /*COLOCO EL INDICADOR DE POSICION AL PRINCIPIO DE LA ESTRUCTURA QUE QUIERO LEER*/
     fseek(pCfg, (31 - diaUsuario) * sizeof(struct sConfig) + 31 - diaUsuario, SEEK_SET);
-    /**LEO LA ESTRUCTURA*/
+    /*LEO LA ESTRUCTURA*/
     fread(pConfig, 1, sizeof(struct sConfig), pCfg);
 
     if(pConfig->numRotores == 3) {
@@ -92,7 +92,7 @@ void leeConfig (struct sConfig * pConfig) {
 
 
 void muestraConfig	(struct sConfig config) {
-    /**MUESTRA LA CONFIGURACION EN PANTALLA*/
+    /*MUESTRA LA CONFIGURACION EN PANTALLA*/
     int i, x = 2, longitud;
     char output[23];
     char letraRing[5];
@@ -103,7 +103,7 @@ void muestraConfig	(struct sConfig config) {
     char mensaje[] = "Pulsa tecla para continuar...", auxiliar[80], auxiliar2[80];
     output[23] = 0;
 
-    /**WALZENLAGE*/
+    /*WALZENLAGE*/
     for(i = 0; i < 22; i++)
         output[i] = ' ';
 
@@ -204,17 +204,18 @@ void muestraConfig	(struct sConfig config) {
             }
         }
     }
-    output[i*5] = 0; /*CORTO LA LONGITUD DE LA CADENA*/
+    /*CORTO LA LONGITUD DE LA CADENA*/
+    output[i*5] = 0;
 
     /*------------------------------------------------------------------------------*/
-    /**RINGSTELLUNG*/
+    /*RINGSTELLUNG*/
     for(i=0; i<config.numRotores; i++)
         letraRing[i]=(char)(config.ringS[i]+64);
 
     letraRing[i]=0;
 
     /*------------------------------------------------------------------------------*/
-    /**STECKER*/
+    /*STECKER*/
 
     k=0;
     for(i = 0; i < 20; i++)
@@ -240,14 +241,12 @@ void muestraConfig	(struct sConfig config) {
                 for(j = 0; j < i; j++) {
                     distinto = (config.stecker[j] != abcdario[i]);
                     if(!distinto) break;
-                    // if(config.stecker[j] != abcdario[i])
-                    //     /*PARA INDICAR QUE NO HA SALIDO ANTES*/
-                    //     distinto=1;
-                    // else {
-                    //     /*PARA INDICAR QUE YA HA SALIDO ANTES*/
-                    //     distinto=0;
-                    //     break;
-                    // }
+                    /*if(config.stecker[j] != abcdario[i])
+                        distinto=1;
+                    else {
+                        distinto=0;
+                        break;
+                    }*/
 
                 }
                 /*SI NO HA SALIDO SE GUARDA LA POSICION*/
@@ -466,18 +465,18 @@ void selecModelo(struct sConfig *pConfig) {
                 break;
         }
 
-        // if(opcion == 1) {
-        //     pConfig->numRotores=3;
-        //     pConfig->modeloETW='B';
-        // } else if(opcion == 2) {
-        //     pConfig->numRotores=3;
-        //     pConfig->modeloETW='C';
-        // } else if(opcion == 3) {
-        //     pConfig->numRotores=4;
-        //     pConfig->modeloETW='B';
-        // } else if(opcion == 4) {
-        //     pConfig->numRotores=4;
-        //     pConfig->modeloETW='C';
-        // }
+        /*if(opcion == 1) {
+            pConfig->numRotores=3;
+            pConfig->modeloETW='B';
+        } else if(opcion == 2) {
+            pConfig->numRotores=3;
+            pConfig->modeloETW='C';
+        } else if(opcion == 3) {
+            pConfig->numRotores=4;
+            pConfig->modeloETW='B';
+        } else if(opcion == 4) {
+            pConfig->numRotores=4;
+            pConfig->modeloETW='C';
+        }*/
     }
 }
