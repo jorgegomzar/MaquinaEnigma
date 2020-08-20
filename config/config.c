@@ -26,18 +26,6 @@ void leeConfig (struct sConfig * pConfig) {
             strcpy(nombreArchivo, "./BASEDATOS/libro_M4_C.bin");
     }
 
-    /* if(pConfig->numRotores==3 && pConfig->modeloETW=='B')
-         strcpy(nombreArchivo, "./BASEDATOS/libro_M3_B.bin");
-
-     if(pConfig->numRotores==3 && pConfig->modeloETW=='C')
-         strcpy(nombreArchivo, "./BASEDATOS/libro_M3_C.bin");
-    
-     if(pConfig->numRotores==4 && pConfig->modeloETW=='B')
-         strcpy(nombreArchivo, "./BASEDATOS/libro_M4_B.bin");
-
-     if(pConfig->numRotores==4 && pConfig->modeloETW=='C')
-         strcpy(nombreArchivo, "./BASEDATOS/libro_M4_C.bin");*/
-
     /*ABRE EL FICHERO BINARIO Y AVISA SI HAY ALGUN PROBLEMA*/
     pCfg=fopen(nombreArchivo, "rb");
     if(pCfg == NULL) {
@@ -91,7 +79,7 @@ void leeConfig (struct sConfig * pConfig) {
 }
 
 
-void muestraConfig	(struct sConfig config) {
+void muestraConfig (struct sConfig config) {
     /*MUESTRA LA CONFIGURACION EN PANTALLA*/
     int i, x = 2, longitud;
     char output[23];
@@ -107,7 +95,7 @@ void muestraConfig	(struct sConfig config) {
     for(i = 0; i < 22; i++)
         output[i] = ' ';
 
-    output[i]=0;
+    output[i] = 0;
 
     /*ESCRIBO EN UNA CADENA OUTPUT AUXILIAR LOS NUMEROS DE WALZEN EN NUMEROS ROMANOS*/
     for(i=0; i<config.numRotores; i++) {
@@ -241,13 +229,6 @@ void muestraConfig	(struct sConfig config) {
                 for(j = 0; j < i; j++) {
                     distinto = (config.stecker[j] != abcdario[i]);
                     if(!distinto) break;
-                    /*if(config.stecker[j] != abcdario[i])
-                        distinto=1;
-                    else {
-                        distinto=0;
-                        break;
-                    }*/
-
                 }
                 /*SI NO HA SALIDO SE GUARDA LA POSICION*/
                 if(distinto) {
@@ -464,19 +445,5 @@ void selecModelo(struct sConfig *pConfig) {
                 pConfig->modeloETW='C';
                 break;
         }
-
-        /*if(opcion == 1) {
-            pConfig->numRotores=3;
-            pConfig->modeloETW='B';
-        } else if(opcion == 2) {
-            pConfig->numRotores=3;
-            pConfig->modeloETW='C';
-        } else if(opcion == 3) {
-            pConfig->numRotores=4;
-            pConfig->modeloETW='B';
-        } else if(opcion == 4) {
-            pConfig->numRotores=4;
-            pConfig->modeloETW='C';
-        }*/
     }
 }

@@ -1,13 +1,10 @@
 #include "menus.h"
 #include "../auxiliar/auxiliar.h"
 
-char menuPrincipal(void)
-{
+char menuPrincipal(void) {
     /**DIBUJA EL MENU PRINCIPAL Y ESPERA LA RESPUESTA DEL USUARIO*/
     int n;
     char c;
-	
-	
 	
     system("title Proyecto Integrador v3.2");
     system("color 4f");
@@ -15,7 +12,7 @@ char menuPrincipal(void)
     printf(" %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",218,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,191);
     printf(" %c",179);
     setlocale(LC_CTYPE, "spanish");
-    printf("\t\t  Menú Principal\t\t");
+    printf("\t\t  MenÃº Principal\t\t");
     setlocale(LC_CTYPE, "C");
     printf("%c\n",179);
     printf(" %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",192,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,217);
@@ -25,25 +22,21 @@ char menuPrincipal(void)
     printf(" %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",218,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,191);
     printf(" %c ",179);
     setlocale(LC_CTYPE, "spanish");
-    printf("Selecciona una opción:\t\t\t");
+    printf("Selecciona una opcion:\t\t\t");
     setlocale(LC_CTYPE, "C");
     printf("%c\n",179);
     printf(" %c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",192,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,196,217);
     gotoxy(26,9);
 
-    do
-    {
-        c=getch();
-        n=(int)(c-48);
-    }
-    while (n>2 || n<0);
+    do {
+        c = getch();
+        n = (int)(c - 48);
+    } while (n > 2 || n < 0);
     return c;
 }
 
-void gestionMenuPrincipal(void)
-{
-    switch(menuPrincipal())
-    {
+void gestionMenuPrincipal() {
+    switch(menuPrincipal()) {
     case '1':
         inicCifrado();
         break;
@@ -53,6 +46,5 @@ void gestionMenuPrincipal(void)
     case '0':
         exit(0);
         break;
-
     }
 }

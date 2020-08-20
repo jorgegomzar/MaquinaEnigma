@@ -9,11 +9,8 @@
 #include <ctype.h>
 #include <windows.h>
 #include <string.h>
-#include "../auxiliar/auxiliar.h"
 
-
-struct sConfig
-{
+struct sConfig {
     int 	        dia;
     char 	        grund[5];
     char         	modeloETW;
@@ -22,17 +19,14 @@ struct sConfig
     char 	        stecker[27];
     unsigned short 	walzen[4];
 };
+
+#include "../auxiliar/auxiliar.h"
 #include "../maquina/reflector.h"
 #include "../maquina/rotores.h"
 
-void    gestionMenuPrincipal();
-void 	leeConfig (struct sConfig * pConfig);
-void    muestraConfig	(struct sConfig config);
-void    inicCifrado();
-void    gestionMenuPrincipal(void);
-int     sondeaTeclado();
-void 	leeCfgReflector (char archivo[], struct sReflector * pRef);
-void    generaLibroClaves();
-void    selecModelo(struct sConfig *pConfig);
+void generaLibroClaves();
+void leeConfig(struct sConfig * pConfig);
+void muestraConfig(struct sConfig config);
+void selecModelo(struct sConfig *pConfig);
 #endif
 
