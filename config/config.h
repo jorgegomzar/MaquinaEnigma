@@ -11,13 +11,13 @@
 #include <string.h>
 
 struct sConfig {
-    int 	        dia;
-    char 	        grund[5];
-    char         	modeloETW;
-    unsigned short 	numRotores;
-    unsigned short 	ringS[4];
-    char 	        stecker[27];
-    unsigned short 	walzen[4];
+	int				dia;
+	char			grund[5];
+	char			modeloETW;
+	unsigned short	numRotores;
+	unsigned short	ringS[4];
+	char			stecker[27];
+	unsigned short	walzen[4];
 };
 
 #include "../auxiliar/auxiliar.h"

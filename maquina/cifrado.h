@@ -17,14 +17,6 @@
 void inicCifrado(void);
 void configuracion(struct sEnigma * pEnigma);
 
-/*void procesoCifrado	(	char 	rotor[][3][27],
-                        char 	muesca[][3],
-                        int 	coordRotor[][2],
-                        char 	stecker[],
-                        unsigned short 	walzen[3],
-                        char 	reflector[]);*/
-
-
 void    procesoCifrado(struct sEnigma pEnigma);
 char    leeLetra(unsigned short dx);
 void    abreArchivosMensaje	(	FILE **ptPlano, FILE **ptCifrado);

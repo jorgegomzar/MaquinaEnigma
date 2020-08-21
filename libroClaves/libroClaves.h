@@ -16,13 +16,6 @@ void fprintWalzenlage (int nrotor, unsigned short walzen[], FILE *ptr, FILE *pCf
 void genStecker(char stecker[]);
 void fprintStecker(char stecker[], FILE *ptr, FILE *pCfg);
 
-
-
-
-
-
-
-
 /*VERSION 1
 
 void genWalzenlage(int nrotor, char rotores[]);
