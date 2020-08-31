@@ -306,16 +306,15 @@ void muestraConfig (struct sConfig config) {
 				printf("%s", auxiliar);
 			}
 		}
-		else
-			printf("%s", mensaje);
+		else printf("%s", mensaje);
 
 		for(i=0; i!=50000000; i++);
 
 		gotoxy(2,11);
 		for (i = 0; i != 48; i++)
 			printf(" ");
-	}
-	while(sondeaTeclado() == -1);
+			
+	} while(sondeaTeclado() == -1);
 	setlocale(LC_CTYPE, "C");
 }
 

@@ -18,5 +18,4 @@ void 	printLetraCifrada (char letra, FILE *ptCifrado);
 void 	dibujaStecker (char stecker[], unsigned short dx);
 void    dibujaRotor(struct sRotor rotor, struct sPunto coordRotor);
 void 	dibujaReflector (struct sReflector reflector);
-
 #endif
